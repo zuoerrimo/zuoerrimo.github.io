@@ -191,9 +191,9 @@
       
         
         <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
+          <a href="/tags" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
             
             标签
           </a>
@@ -201,9 +201,9 @@
       
         
         <li class="menu-item menu-item-categories">
-          <a href="/categories/" rel="section">
+          <a href="/categories" rel="section">
             
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+              <i class="menu-item-icon fa fa-fw fa-question-circle"></i> <br />
             
             分类
           </a>
@@ -238,6 +238,312 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/14/初探json-server-md/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="左耳日末">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="左耳日末">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/12/14/初探json-server-md/" itemprop="url">初探json-server</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-14T11:42:16+08:00">
+                2017-12-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/mockdata/" itemprop="url" rel="index">
+                    <span itemprop="name">mockdata</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p>   前端有三痛：1、与产品经理打交道，每天改改改；2、与后端打交道，由于产品改导致后端数据改改改；3、与QA打交道，每天问你为什么不这样做，大哥，去问产品噻。产品和QA的问题目前没有好的解决方案，对于后端数据由于产品修改不能及时给出mockdata的问题，顺藤摸瓜找到了json-server。</p>
+<h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><p>  node、npm必备的工具，在这里就不赘述了。</p>
+<p>  开发环境与工具：windows下git bash。</p>
+<p>   1、全局安装json-sever<br>     <code>npm install -g json-server</code><br>     遇到的问题： 在git bash下安装报错，需要在管理员权限下安装。<br>   2、创建db.json文件，输入以下内容<br>    <code>{
+      &quot;student&quot;: [
+        {&quot;id&quot;: 1, &quot;name&quot;: &quot;zhangsan&quot;, &quot;age&quot;:&quot;18&quot;, &quot;gender&quot;: &quot;male&quot;},
+        {&quot;id&quot;: 2, &quot;name&quot;: &quot;lisi&quot;, &quot;age&quot;: &quot;20&quot;, &quot;gender&quot;: &quot;female&quot;}
+      ]
+    }</code>  </p>
+<p>   3、输入命令<br>       <code>json-server db.json</code><br>        可以看到如下：<br>       <img src="/2017/12/14/初探json-server-md/result.jpg"><br>   4、打开浏览器输入：<a href="http://localhost:3000/student，可以看到如下效果：" target="_blank" rel="noopener">http://localhost:3000/student，可以看到如下效果：</a><br>       <img src="/2017/12/14/初探json-server-md/render.jpg"></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/01/运算符、数据类型二三事/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="左耳日末">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="左耳日末">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/12/01/运算符、数据类型二三事/" itemprop="url">运算符、数据类型二三事</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-01T11:06:50+08:00">
+                2017-12-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/javascript重撸之旅/" itemprop="url" rel="index">
+                    <span itemprop="name">javascript重撸之旅</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><ul>
+<li><p>js分为原始数据类型和引用数据类型；</p>
+<ul>
+<li>原始类型：Boolean,String,Number,Symbol,Null,Undefined</li>
+<li><p>引用类型：Object</p>
+</li>
+<li><p>typeof 返回类型皆为字符串，如下表:</p>
+<pre><code>| 类型        | 结果          | 
+</code></pre><p>| ————- |:————-:|<br>| Undefined      | “undefined” |<br>| Null    | “object”      |<br>| Boolean     | “boolean”      |<br>| Number | “number”      |<br>| String | “string”      |<br>| Symbol | “symbol”      |<br>| 函数对象 | “function”      |</p>
+</li>
+</ul>
+<p>typeof(没有定义的变量) === ‘undefined’ </p>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -351,7 +657,7 @@
 <li>解释型语言：单句翻译，速度稍微慢些，跨平台 代表： javascript、php</li>
 <li>编译型语言：通篇翻译，速度稍微快些，不跨平台，代表： C、C++</li>
 <li>java是借助jvm是在跨平台的，所以不属于上述两种</li>
-<li>javasrcipt是单线程的(划重点)<br>js是单线程的，浏览器是多线程的。<a href="http://www.cnblogs.com/Mainz/p/3552717.html" target="_blank" rel="noopener">参考链接</a></li>
+<li>javasrcipt是单线程的(划重点)<br>js是单线程的，浏览器是多线程的。<a href="http://www.cnblogs.com/Mainz/p/3552717.html" target="_blank" rel="noopener">参考链接</a>、<a href="https://segmentfault.com/a/1190000004322358" target="_blank" rel="noopener">AjaxD的线程机制</a></li>
 </ul>
 <h2 id="javascript的组成"><a href="#javascript的组成" class="headerlink" title="javascript的组成"></a>javascript的组成</h2><p>   DOM + BOM + ECMAScript</p>
 <h2 id="主流浏览器及其内核"><a href="#主流浏览器及其内核" class="headerlink" title="主流浏览器及其内核"></a>主流浏览器及其内核</h2><table>
@@ -608,7 +914,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -618,10 +924,10 @@
               
               
               <div class="site-state-item site-state-categories">
-                
-                  <span class="site-state-item-count">2</span>
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">分类</span>
-                
+                </a>
               </div>
             
 
@@ -629,10 +935,10 @@
               
               
               <div class="site-state-item site-state-tags">
-                
-                  <span class="site-state-item-count">2</span>
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">标签</span>
-                
+                </a>
               </div>
             
 
