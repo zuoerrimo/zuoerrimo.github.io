@@ -252,6 +252,161 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/21/vue与json-server结合使用/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="左耳日末">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="左耳日末">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/12/21/vue与json-server结合使用/" itemprop="url">vue与json-server结合使用</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-21T10:55:03+08:00">
+                2017-12-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/mockdata/" itemprop="url" rel="index">
+                    <span itemprop="name">mockdata</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p>   之前学习vue时，一直在想怎么更好的展现数据，而不需要用java、php等后端语言，有很多办法用expres与mongodb做结合是我最近一直想做的，但为了简单选择了json-server做基础数据开发。</p>
+<h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><p>   1、安装vue-cli、json-server</p>
+<p>   2、<code>vue init webpack vue-json-server-demo</code></p>
+<p>   3、在vue-json-server-demo创建文件夹mock,mock下创建mock.js,如图：<br>       <img src="/2017/12/21/vue与json-server结合使用/mockjs.jpg"></p>
+<p>   4、在package.json中添加<code>&quot;mock&quot;: &quot;json-server mock/mock.js --port 9090&quot;,</code>命令</p>
+<p>   5、由于mock.js中有用到faker、lodash，我们需要输入<code>npm install faker lodash --save</code></p>
+<p>   6、<code>npm run mock</code>,浏览器中输入<a href="http://localhost:9090/people，可以看到一组json字符串" target="_blank" rel="noopener">http://localhost:9090/people，可以看到一组json字符串</a></p>
+<p>   7、最终想实现如下的效果<br>     <img src="/2017/12/21/vue与json-server结合使用/userlist.jpg"></p>
+<p>   8、将src/components/HelloWorld.vue作为我们要展示的页面</p>
+<p>   9、安装axios用于请求数据，<code>npm install axios --save</code></p>
+<p>   10、安装element-ui用于页面展示,<code>element-ui</code></p>
+<p>   11、main.js中添加element-ui的引用，如下图<br>       </p>
+<p>   12、配置mock的代理，在config/index.js中配置代理如图：<br>       <img src="/2017/12/21/vue与json-server结合使用/proxy.jpg"><br>       这样访问api/xxx就可以直接跳转到9090上访问。当然也可以同时配置axios的baseUrl设置代理，<br>       如图：<br>       <img src="/2017/12/21/vue与json-server结合使用/base.png"></p>
+<p>   13、HelloWorld.vue逻辑代码如下：<br>       <img src="/2017/12/21/vue与json-server结合使用/hello.jpg"></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/14/初探json-server-md/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -914,7 +1069,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

@@ -79,21 +79,24 @@
 
 
 
-<meta name="description" content="起因   前端有三痛：1、与产品经理打交道，每天改改改；2、与后端打交道，由于产品改导致后端数据改改改；3、与QA打交道，每天问你为什么不这样做，大哥，去问产品噻。产品和QA的问题目前没有好的解决方案，对于后端数据由于产品修改不能及时给出mockdata的问题，顺藤摸瓜找到了json-server。 实例  node、">
+<meta name="description" content="起因   之前学习vue时，一直在想怎么更好的展现数据，而不需要用java、php等后端语言，有很多办法用expres与mongodb做结合是我最近一直想做的，但为了简单选择了json-server做基础数据开发。 实例   1、安装vue-cli、json-server    2、vue init webpack v">
 <meta name="keywords" content="mockdata">
 <meta property="og:type" content="article">
-<meta property="og:title" content="初探json-server">
-<meta property="og:url" content="http://yoursite.com/2017/12/14/初探json-server-md/index.html">
+<meta property="og:title" content="vue与json-server结合使用">
+<meta property="og:url" content="http://yoursite.com/2017/12/21/vue与json-server结合使用/index.html">
 <meta property="og:site_name" content="左耳日末">
-<meta property="og:description" content="起因   前端有三痛：1、与产品经理打交道，每天改改改；2、与后端打交道，由于产品改导致后端数据改改改；3、与QA打交道，每天问你为什么不这样做，大哥，去问产品噻。产品和QA的问题目前没有好的解决方案，对于后端数据由于产品修改不能及时给出mockdata的问题，顺藤摸瓜找到了json-server。 实例  node、npm必备的工具，在这里就不赘述了。   开发环境与工具：windows下git">
+<meta property="og:description" content="起因   之前学习vue时，一直在想怎么更好的展现数据，而不需要用java、php等后端语言，有很多办法用expres与mongodb做结合是我最近一直想做的，但为了简单选择了json-server做基础数据开发。 实例   1、安装vue-cli、json-server    2、vue init webpack vue-json-server-demo    3、在vue-json-serve">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/2017/12/14/初探json-server-md/result.jpg">
-<meta property="og:image" content="http://yoursite.com/2017/12/14/初探json-server-md/render.jpg">
-<meta property="og:updated_time" content="2017-12-21T02:54:04.525Z">
+<meta property="og:image" content="http://yoursite.com/2017/12/21/vue与json-server结合使用/mockjs.jpg">
+<meta property="og:image" content="http://yoursite.com/2017/12/21/vue与json-server结合使用/userlist.jpg">
+<meta property="og:image" content="http://yoursite.com/2017/12/21/vue与json-server结合使用/proxy.jpg">
+<meta property="og:image" content="http://yoursite.com/2017/12/21/vue与json-server结合使用/base.png">
+<meta property="og:image" content="http://yoursite.com/2017/12/21/vue与json-server结合使用/hello.jpg">
+<meta property="og:updated_time" content="2017-12-21T06:14:50.881Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="初探json-server">
-<meta name="twitter:description" content="起因   前端有三痛：1、与产品经理打交道，每天改改改；2、与后端打交道，由于产品改导致后端数据改改改；3、与QA打交道，每天问你为什么不这样做，大哥，去问产品噻。产品和QA的问题目前没有好的解决方案，对于后端数据由于产品修改不能及时给出mockdata的问题，顺藤摸瓜找到了json-server。 实例  node、npm必备的工具，在这里就不赘述了。   开发环境与工具：windows下git">
-<meta name="twitter:image" content="http://yoursite.com/2017/12/14/初探json-server-md/result.jpg">
+<meta name="twitter:title" content="vue与json-server结合使用">
+<meta name="twitter:description" content="起因   之前学习vue时，一直在想怎么更好的展现数据，而不需要用java、php等后端语言，有很多办法用expres与mongodb做结合是我最近一直想做的，但为了简单选择了json-server做基础数据开发。 实例   1、安装vue-cli、json-server    2、vue init webpack vue-json-server-demo    3、在vue-json-serve">
+<meta name="twitter:image" content="http://yoursite.com/2017/12/21/vue与json-server结合使用/mockjs.jpg">
 
 
 
@@ -123,13 +126,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/12/14/初探json-server-md/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/12/21/vue与json-server结合使用/"/>
 
 
 
 
 
-  <title>初探json-server | 左耳日末</title>
+  <title>vue与json-server结合使用 | 左耳日末</title>
   
 
 
@@ -256,7 +259,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/14/初探json-server-md/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/21/vue与json-server结合使用/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="左耳日末">
@@ -273,7 +276,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">初探json-server</h1>
+          <h1 class="post-title" itemprop="name headline">vue与json-server结合使用</h1>
         
 
         <div class="post-meta">
@@ -285,8 +288,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-14T11:42:16+08:00">
-                2017-12-14
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-21T10:55:03+08:00">
+                2017-12-21
               </time>
             
 
@@ -345,16 +348,20 @@
       
 
       
-        <h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p>   前端有三痛：1、与产品经理打交道，每天改改改；2、与后端打交道，由于产品改导致后端数据改改改；3、与QA打交道，每天问你为什么不这样做，大哥，去问产品噻。产品和QA的问题目前没有好的解决方案，对于后端数据由于产品修改不能及时给出mockdata的问题，顺藤摸瓜找到了json-server。</p>
-<h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><p>  node、npm必备的工具，在这里就不赘述了。</p>
-<p>  开发环境与工具：windows下git bash。</p>
-<p>   1、全局安装json-sever<br>     <code>npm install -g json-server</code><br>     遇到的问题： 在git bash下安装报错，需要在管理员权限下安装。<br>   2、创建db.json文件，输入以下内容<br>    <code>{
-      &quot;student&quot;: [
-        {&quot;id&quot;: 1, &quot;name&quot;: &quot;zhangsan&quot;, &quot;age&quot;:&quot;18&quot;, &quot;gender&quot;: &quot;male&quot;},
-        {&quot;id&quot;: 2, &quot;name&quot;: &quot;lisi&quot;, &quot;age&quot;: &quot;20&quot;, &quot;gender&quot;: &quot;female&quot;}
-      ]
-    }</code>  </p>
-<p>   3、输入命令<br>       <code>json-server db.json</code><br>        可以看到如下：<br>       <img src="/2017/12/14/初探json-server-md/result.jpg"><br>   4、打开浏览器输入：<a href="http://localhost:3000/student，可以看到如下效果：" target="_blank" rel="noopener">http://localhost:3000/student，可以看到如下效果：</a><br>       <img src="/2017/12/14/初探json-server-md/render.jpg"></p>
+        <h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p>   之前学习vue时，一直在想怎么更好的展现数据，而不需要用java、php等后端语言，有很多办法用expres与mongodb做结合是我最近一直想做的，但为了简单选择了json-server做基础数据开发。</p>
+<h2 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h2><p>   1、安装vue-cli、json-server</p>
+<p>   2、<code>vue init webpack vue-json-server-demo</code></p>
+<p>   3、在vue-json-server-demo创建文件夹mock,mock下创建mock.js,如图：<br>       <img src="/2017/12/21/vue与json-server结合使用/mockjs.jpg"></p>
+<p>   4、在package.json中添加<code>&quot;mock&quot;: &quot;json-server mock/mock.js --port 9090&quot;,</code>命令</p>
+<p>   5、由于mock.js中有用到faker、lodash，我们需要输入<code>npm install faker lodash --save</code></p>
+<p>   6、<code>npm run mock</code>,浏览器中输入<a href="http://localhost:9090/people，可以看到一组json字符串" target="_blank" rel="noopener">http://localhost:9090/people，可以看到一组json字符串</a></p>
+<p>   7、最终想实现如下的效果<br>     <img src="/2017/12/21/vue与json-server结合使用/userlist.jpg"></p>
+<p>   8、将src/components/HelloWorld.vue作为我们要展示的页面</p>
+<p>   9、安装axios用于请求数据，<code>npm install axios --save</code></p>
+<p>   10、安装element-ui用于页面展示,<code>element-ui</code></p>
+<p>   11、main.js中添加element-ui的引用，如下图<br>       </p>
+<p>   12、配置mock的代理，在config/index.js中配置代理如图：<br>       <img src="/2017/12/21/vue与json-server结合使用/proxy.jpg"><br>       这样访问api/xxx就可以直接跳转到9090上访问。当然也可以同时配置axios的baseUrl设置代理，<br>       如图：<br>       <img src="/2017/12/21/vue与json-server结合使用/base.png"></p>
+<p>   13、HelloWorld.vue逻辑代码如下：<br>       <img src="/2017/12/21/vue与json-server结合使用/hello.jpg"></p>
 
       
     </div>
@@ -385,8 +392,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/12/01/运算符、数据类型二三事/" rel="next" title="运算符、数据类型二三事">
-                <i class="fa fa-chevron-left"></i> 运算符、数据类型二三事
+              <a href="/2017/12/14/初探json-server-md/" rel="next" title="初探json-server">
+                <i class="fa fa-chevron-left"></i> 初探json-server
               </a>
             
           </div>
@@ -394,10 +401,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/12/21/vue与json-server结合使用/" rel="prev" title="vue与json-server结合使用">
-                vue与json-server结合使用 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
